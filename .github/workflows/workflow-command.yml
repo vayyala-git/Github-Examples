@@ -4,8 +4,14 @@ jobs:
   setenv:
     runs-on: ubuntu-latest
     steps:
+      - name: grouplogging
+        run: |
+           echo "::group::My group message"
+           echo "msg1"
+           echo "msg2"
+           echo "::endgroup::"
       - name: setenv
-        run: echo "ENV:Prod" >> $GITHUB_ENV
+        run: echo "ENV=Prod" >> $GITHUB_ENV
       - name: print
         run: echo $ENV
 
