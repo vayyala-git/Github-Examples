@@ -1,0 +1,17 @@
+name: workflow-command
+on: push
+jobs:
+  setenv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setenv
+        run: echo "ENV:Prod" >> $GITHUB_ENV
+      - name: print
+        run: echo $ENV
+
+
+  
+
+
+
+
