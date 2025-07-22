@@ -7,5 +7,6 @@ jobs:
     - name: test
       run: |
         echo "$ACTION $ACTOR"
-        env: ACTION=${{ github.action }}
-             ACTOR=${{ github.actor }}
+        env: 
+          ACTION=${{ github.action }}
+          ACTOR=${{ github.actor }}
