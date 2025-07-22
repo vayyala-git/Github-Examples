@@ -1,0 +1,11 @@
+name: context
+on: push
+jobs:
+  context:
+  runs-on: ubuntu-latest
+  steps:
+    - name: test
+      run: |
+        echo "$ACTION $ACTOR"
+        env: ACTION=${{ github.action }}
+             ACTOR=${{ github.actor }}
